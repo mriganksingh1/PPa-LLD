@@ -48,6 +48,10 @@ public class User {
 
 }
 
-
+// Rememeber these questions for this pattern
+// - Why we did not solve it by using setters in the User class itself? - Because it will make variables we are setting using setters as non-final and in multi-threaded environments it is important to maintain immutability.
+// - Why we declare the inner class as static? So that we can call it by User class itself and not have to make object. 
+// - Why this pattern is needed? As there are many arguments and some optional arguments so there will be too many permutations of constructors which will not be sustainable.
+// - Why are we using setter in inner class when it is a problem in outer class? - we are compromising the immutability of this secondary insider class instead of our primary class as this is a transient class.
 
 
